@@ -13,31 +13,8 @@ $_SESSION['post']['title'] = $_POST['title'];
 $_SESSION['post']['yoyaku'] = $_POST['yoyaku'];
 $_SESSION['post']['content'] = $_POST['content'];
 
-if ($_FILES['img']['name'] !== '') {
-    $file_name = $_SESSION['post']['file_name'] = $_FILES['img']['name'];
-    $image_data = $_SESSION['post']['image_data'] = file_get_contents($_FILES['img']['tmp_name']);
-    $image_type = $_SESSION['post']['image_type'] = exif_imagetype($_FILES['img']['tmp_name']);
-
-} elseif($_FILES['img']['name'] === '' && $_SESSION['post']['image_data'] !== '') {
-    $file_name = $_SESSION['post']['file_name'];
-    $image_data = $_SESSION['post']['image_data'];
-    $image_type = $_SESSION['post']['image_type'];
-
-} else {
-    $file_name = $_SESSION['post']['file_name'] = '';
-    $image_data = $_SESSION['post']['image_data'] = '';
-    $image_type = $_SESSION['post']['image_type'] = '';
-}
-
 if (trim($title) === '' || trim($content) === '') {
     redirect('post.php?error');
-}
-
-if (!empty($file_name)) {
-    $extension = substr($file_name, -3);
-    if ($extension != 'jpg' && $extension != 'gif' && $extension != 'png') {
-        redirect('post.php?error=1');
-    }
 }
 
 ?>
@@ -45,7 +22,7 @@ if (!empty($file_name)) {
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <?= head_parts('確認') ?>
+    <?= head_parts('Former Ruts') ?>
 </head>
 
 <body>
@@ -69,13 +46,6 @@ if (!empty($file_name)) {
             <input type="hidden"name="content" value="<?= $content ?>">
             <div><?= nl2br($content) ?></div>
         </div>
-
-        <?php if ($image_data) :?>
-            <div class="mb-3">
-                <img src="image.php">
-            </div>
-        <?php endif; ?>
-
         <button type="submit" class="btn btn-primary">投稿</button>
     </form>
 

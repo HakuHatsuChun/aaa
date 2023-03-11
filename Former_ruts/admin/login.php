@@ -5,7 +5,7 @@ require_once('../common/head_parts.php');
 <!doctype html>
 <html lang="ja">
 <head>
-    <?= head_parts('login') ?>
+    <?= head_parts('Former Ruts') ?>
     <style>
     .form-signin {
         width: 100%;

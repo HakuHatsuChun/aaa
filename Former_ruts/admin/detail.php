@@ -25,11 +25,6 @@ if ($status == false) {
 <body>
     <?=  $header_nav?>
     <div class="mb-3 w-25">
-        <?php if($row['img'] !== '') : ?>
-            <img src="../images/<?= $row['img'] ?>" alt="" class="bd-placeholder-img card-img-top" >
-        <?php else : ?>
-            <img src="../images/no_image_logo.png" alt="" class="bd-placeholder-img card-img-top" >
-        <?php endif ?>
         </div>
             <label for="title" class="form-label">タイトル</label>
             <?= $row["title"] ?>

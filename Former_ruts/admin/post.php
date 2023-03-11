@@ -30,7 +30,7 @@ if (isset($_SESSION['post']['image_data'])) {
 <html lang="ja">
 
 <head>
-    <?= head_parts('記事管理') ?>
+    <?= head_parts('Former Ruts') ?>
 </head>
 
 <body>
@@ -60,16 +60,6 @@ if (isset($_SESSION['post']['image_data'])) {
             id="content" aria-describedby="content"
             rows="7" cols="40"><?= $content ?></textArea>
             <div id="emailHelp" class="form-text">※入力必須</div>
-        </div>
-
-        <div class="mb-3">
-            <?php if (isset($image_data)): ?>
-            <img src="image.php">
-            <?php endif;?>
-        </div>
-        <div class="mb-3">
-            <label for="title" class="form-label">画像</label>
-            <input type="file" name="img">
         </div>
 
         <button type="submit" class="btn btn-primary">確認する</button>

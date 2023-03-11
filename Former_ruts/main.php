@@ -1,7 +1,6 @@
 <?php
 session_start();
 require_once('funcs.php');
-require_once('common/footer.php');
 require_once('common/head_parts.php');
 
 
@@ -22,22 +21,23 @@ if ($status == false) {
 
 <head>
     <?= head_parts('Former Ruts') ?>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body id="main">
     <div class="album py-5 bg-light">
-        <figure class="text-center">
-            <h1>Former Ruts</h1>
-        </figure>
+        <header>
+            <h1></h1>
+            <div class="nav-item">
+                <a class="nav-link active" aria-current="page" href="admin/login.php">ログイン</a>
+            </div>
+        </header>
         <div class="container">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 <?php foreach ($contents as $content): ?>
                     <div class="col">
                         <div class="card shadow-sm">
-                        <?php if($content['img'] !== '') : ?>                            <img src="images/<?= $content['img'] ?>" alt="" class="bd-placeholder-img card-img-top" >
-                        <?php else : ?>
-                            <img src="images/default_image/no_image_logo.png" alt="" class="bd-placeholder-img card-img-top" >
-                        <?php endif ?>
                             <div class="card-body">
                                 <h3><?= $content['title'] ?></h3>
                                 <div class="d-flex justify-content-between align-items-center">

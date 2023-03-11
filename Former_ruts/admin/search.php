@@ -72,48 +72,11 @@ $dbh=null;
 <!DOCTYPE html>
 <html>
 <head>
-<?= head_parts('検索') ?>
+<?= head_parts('Former Ruts') ?>
 </head>
 
-<style>
-    table{
-  border-collapse: collapse;
-}
-
-table tr{
-  border-bottom: solid 2px white;
-}
-
-table tr:last-child{
-  border-bottom: none;
-}
-
-table th{
-  position: relative;
-  text-align: left;
-  background-color: #52c2d0;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-}
-
-table th:after{
-  display: block;
-  top:calc(50% - 10px);
-  right:-10px;
-  border-left: 10px solid #52c2d0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-}
-
-table td{
-  text-align: left;
-  text-align: center;
-  background-color: #eee;
-  padding: 10px 0;
-}
-</style>
 <body>
+<?= $header_nav ?>
 
 <form action="search.php" method="POST">
 <table border="1" style="border-collapse: collapse">
@@ -138,7 +101,6 @@ table td{
 
 <table border="1" style="border-collapse: collapse">
 <tr>
-<th>ID</th>
 <th>名前</th>
 <th>タグ</th>
 <th>カテゴリー</th>
@@ -147,7 +109,6 @@ table td{
 
 <?php foreach ($rec_list as $rec) { ?>
 <tr>
-<td><?php echo $rec['id'];?></td>
 <td><?php echo $rec['name'];?></td>
 <td><?php echo $rec['tag'];?></td>
 <td><?php echo $rec['category'];?></td>
