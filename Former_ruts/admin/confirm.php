@@ -9,13 +9,18 @@ loginCheck();
 $title = $_POST['title'];
 $yoyaku = $_POST['yoyaku'];
 $content = $_POST['content'];
+$tag = $_POST['tag'];
+$category = $_POST['category'];
 $_SESSION['post']['title'] = $_POST['title'];
 $_SESSION['post']['yoyaku'] = $_POST['yoyaku'];
 $_SESSION['post']['content'] = $_POST['content'];
+$_SESSION['post']['tag'] = $_POST['tag'];
+$_SESSION['post']['category'] = $_POST['category'];
 
 if (trim($title) === '' || trim($content) === '') {
     redirect('post.php?error');
 }
+
 
 ?>
 
@@ -45,7 +50,20 @@ if (trim($title) === '' || trim($content) === '') {
             <label for="content" class="form-label">記事内容</label>
             <input type="hidden"name="content" value="<?= $content ?>">
             <div><?= nl2br($content) ?></div>
+        </div>        
+        
+        <div class="mb-3">
+            <label for="tag" class="form-label">記事内容</label>
+            <input type="hidden"name="tag" value="<?= $tag ?>">
+            <div><?= $tag ?></div>
         </div>
+
+        <div class="mb-3">
+            <label for="category" class="form-label">記事内容</label>
+            <input type="hidden"name="category" value="<?= $category ?>">
+            <div><?= $category ?></div>
+        </div>
+
         <button type="submit" class="btn btn-primary">投稿</button>
     </form>
 

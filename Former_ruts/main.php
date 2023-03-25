@@ -20,7 +20,10 @@ if ($status == false) {
 <html lang="ja">
 
 <head>
-    <?= head_parts('Former Ruts') ?>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src='JS/index.js'></script>
+    <title>$title</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>

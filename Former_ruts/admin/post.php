@@ -21,8 +21,12 @@ if (isset($_SESSION['post']['content'])) {
     $content = $_SESSION['post']['content'];
 }
 
-if (isset($_SESSION['post']['image_data'])) {
-    $image_data = $_SESSION['post']['image_data'];
+if (isset($_SESSION['post']['tag'])) {
+    $image_data = $_SESSION['post']['tag'];
+}
+
+if (isset($_SESSION['post']['category'])) {
+    $image_data = $_SESSION['post']['category'];
 }
 ?>
 
@@ -59,6 +63,22 @@ if (isset($_SESSION['post']['image_data'])) {
             <textArea type="text" class="form-control" name="content"
             id="content" aria-describedby="content"
             rows="7" cols="40"><?= $content ?></textArea>
+            <div id="emailHelp" class="form-text">※入力必須</div>
+        </div>        
+
+        <div class="mb-3">
+            <label for="tag" class="form-label">タグ</label>
+            <textArea type="text" class="form-control" name="tag"
+            id="tag" aria-describedby="tag"
+            rows="1" cols="10"><?= $tag ?></textArea>
+            <div id="emailHelp" class="form-text">※入力必須</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="category" class="form-label">カテゴリ</label>
+            <textArea type="text" class="form-control" name="category"
+            id="category" aria-describedby="category"
+            rows="1" cols="10"><?= $category ?></textArea>
             <div id="emailHelp" class="form-text">※入力必須</div>
         </div>
 

@@ -16,6 +16,9 @@ $header_nav = <<<EOM
                 </li>                
                 <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="search.php">検索</a>
+                </li>                
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="mypage.php">マイページ</a>
                 </li>
             </ul>
         </div>

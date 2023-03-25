@@ -30,7 +30,6 @@ $val = $stmt->fetch();
 
 if ($val['id'] != '' && password_verify($lpw, $val['lpw'])) {
     $_SESSION['chk_ssid']  = session_id();
-    $_SESSION['kanri_flg'] = $val['kanri_flg'];
     $_SESSION['name']      = $val['name'];
     header('Location:main.php');
 } else {

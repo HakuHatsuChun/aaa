@@ -79,7 +79,6 @@ $dbh=null;
 <?= $header_nav ?>
 
 <form action="search.php" method="POST">
-<table border="1" style="border-collapse: collapse">
 <div class="jumbotron">
 <tr>
 <th>タグ</th>
@@ -99,9 +98,9 @@ $dbh=null;
 <a href="search.php">検索を解除</a><br />
 <?php } ?>
 
-<table border="1" style="border-collapse: collapse">
+<table border="2" style="border-collapse: collapse">
 <tr>
-<th>名前</th>
+<th>タイトル</th>
 <th>タグ</th>
 <th>カテゴリー</th>
 <th>キーワード</th>
@@ -109,7 +108,7 @@ $dbh=null;
 
 <?php foreach ($rec_list as $rec) { ?>
 <tr>
-<td><?php echo $rec['name'];?></td>
+<td><?php echo $rec['title'];?></td>
 <td><?php echo $rec['tag'];?></td>
 <td><?php echo $rec['category'];?></td>
 <td><?php echo $rec['content'];?></td>

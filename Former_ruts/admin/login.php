@@ -36,6 +36,8 @@ require_once('../common/head_parts.php');
             </div>
             <br>
             <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+            <br>
+            <a class="make" href="make.php">アカウントを作成</a>
         </form>
     </main>
 </body>

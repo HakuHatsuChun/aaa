@@ -33,7 +33,7 @@ if ($status == false) {
                 <?php foreach ($contents as $content): ?>
                     <div class="col">
                         <div class="card shadow-sm">
-                    <a href="detail.php?id=<?=$content['id']?>">
+                    <a class="touch" href="detail.php?id=<?=$content['id']?>">
                             <div class="card-body">
                                 <h3><?= $content['title'] ?></h3>
                                 <div class="d-flex justify-content-between align-items-center">

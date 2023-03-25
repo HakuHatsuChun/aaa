@@ -6,7 +6,7 @@ html{
 
 body{
     color: #333333;
-    background-color: #dedede;
+    background-color: #f0f0f0;
 
     font-family: "Helvetica Neue",
     Arial,
@@ -14,12 +14,12 @@ body{
     "Hiragino Sans",
     Meiryo,
     sans-serif;
-    padding-top: 12rem;
+    padding-top: 6rem;
 }
 
 header {
     display: block;
-    background-color: orange;
+    background-color: rgb(255, 189, 66);
     position: fixed;
     width: 100%;
     top: 0;
@@ -66,13 +66,13 @@ ul{
 
 .nav-link{
     color: #333333;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     text-decoration: none;
 }
 
 .nav-item{
     box-sizing: border-box;
-    padding: 20px 8px;
+    padding: 2px 16px;
 }
 
 .form-label {
@@ -194,4 +194,15 @@ button, input, optgroup, select, textarea {
 
 *, ::after, ::before {
     box-sizing: border-box;
+}
+
+.make{
+    margin-top: 2rem;
+    text-decoration: none;
+    color: #333333;
+}
+
+.touch{
+    text-decoration: none;
+    color: #333333;
 }
