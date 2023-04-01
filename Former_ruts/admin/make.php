@@ -15,8 +15,8 @@ if (isset($_SESSION['post']['lid'])) {
     $lid = $_SESSION['post']['lid'];
 }
 
-if (isset($_SESSION['post']['lid'])) {
-    $lid = $_SESSION['post']['lid'];
+if (isset($_SESSION['post']['lpw'])) {
+    $lpw = $_SESSION['post']['lpw'];
 }
 
 ?>

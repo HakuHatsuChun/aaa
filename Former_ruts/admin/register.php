@@ -24,8 +24,8 @@ $stmt = $pdo->prepare('INSERT INTO gs_content_table(
 $stmt->bindValue(':title', $title, PDO::PARAM_STR);
 $stmt->bindValue(':yoyaku', $yoyaku, PDO::PARAM_STR);
 $stmt->bindValue(':content', $content, PDO::PARAM_STR);
-$stmt->bindValue(':tag', $content, PDO::PARAM_STR);
-$stmt->bindValue(':category', $content, PDO::PARAM_STR);
+$stmt->bindValue(':tag', $tag, PDO::PARAM_STR);
+$stmt->bindValue(':category', $category, PDO::PARAM_STR);
 $status = $stmt->execute(); 
 var_dump($title,$yoyaku,$content,$tag,$category,$status);
 

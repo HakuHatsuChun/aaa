@@ -187,6 +187,10 @@ button, input, optgroup, select, textarea {
     border-radius: 0.25rem;
 }
 
+.text-danger{
+    color: red;
+}
+
 .card-body {
     flex: 1 1 auto;
     padding: 1rem 1rem;
@@ -205,4 +209,13 @@ button, input, optgroup, select, textarea {
 .touch{
     text-decoration: none;
     color: #333333;
+}
+.honbun{
+    width: 90rem;
+}
+
+
+
+.moji{
+    font-size: 1.5rem;
 }
