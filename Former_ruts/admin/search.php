@@ -3,6 +3,7 @@ session_start();
 require_once('../funcs.php');
 require_once('../common/head_parts.php');
 require_once('../common/header_nav.php');
+loginCheck();
 
 $dsn='mysql:dbname=gs_db5;host=localhost;charset=utf8';
 $user='root';

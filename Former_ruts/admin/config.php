@@ -5,7 +5,7 @@ require_once('../funcs.php');
 
 $name = $_POST['name'];
 $lid = $_POST['lid'];
-$lpw  = $_POST['lpw'];
+$lpw  = password_hash($_POST['lpw'], PASSWORD_DEFAULT);
 
 if (trim($name) === '' || trim($lpw) === '') {
     redirect('make.php?error');
@@ -13,6 +13,25 @@ if (trim($name) === '' || trim($lpw) === '') {
 
 
 $pdo = db_conn();
+
+$stmt2 = $pdo->prepare('SELECT *
+FROM gs_user_table
+WHERE lid = :lid');
+
+$stmt2->bindValue(':lid', $_POST['lid'] , PDO::PARAM_STR);
+$status2 = $stmt2->execute(); 
+
+if (!$status2) {
+    sql_error($stmt2);
+} else {
+    $result = $stmt2->fetch();
+}
+
+if($result){
+    redirect('make.php');
+    exit();
+    }
+
 $stmt = $pdo->prepare('INSERT INTO gs_user_table(
                             name, lid, lpw
                         )VALUES(

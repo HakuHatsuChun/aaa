@@ -7,14 +7,18 @@ require_once('../common/header_nav.php');
 loginCheck();
 
 $title = '';
+$yoyaku = '';
 $content = '';
+$tag = '';
+$category = '';
+$lid = '';
 
 if (isset($_SESSION['post']['title'])) {
     $title = $_SESSION['post']['title'];
 }
 
 if (isset($_SESSION['post']['yoyaku'])) {
-    $content = $_SESSION['post']['yoyaku'];
+    $yoyaku = $_SESSION['post']['yoyaku'];
 }
 
 if (isset($_SESSION['post']['content'])) {
@@ -22,17 +26,21 @@ if (isset($_SESSION['post']['content'])) {
 }
 
 if (isset($_SESSION['post']['tag'])) {
-    $image_data = $_SESSION['post']['tag'];
+    $tag = $_SESSION['post']['tag'];
 }
 
 if (isset($_SESSION['post']['category'])) {
-    $image_data = $_SESSION['post']['category'];
+    $category = $_SESSION['post']['category'];
 }
+
+if (isset($_SESSION['post']['lid'])) {
+    $lid = $_SESSION['post']['lid'];
+}
+
 ?>
 
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <?= head_parts('Former Ruts') ?>
 </head>
